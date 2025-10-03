@@ -124,7 +124,7 @@ public class Plugin : BasePlugin
 
     private static bool GetCollapseDefault(User localUser)
     {
-        if (localUser?.Root?.Slot?.GetComponent<DynamicVariableSpace>(x => x.SpaceName.Value == "User")?.TryReadValue("User/Inspector_Collapse_Default", out bool collapseDefault) == true)
+        if (localUser?.Root?.Slot?.GetComponent<DynamicVariableSpace>(x => x.SpaceName.Value == "User")?.TryReadValue("Inspector_Collapse_Default", out bool collapseDefault) == true)
         {
             return !collapseDefault;
         }
